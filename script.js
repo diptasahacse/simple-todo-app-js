@@ -1,18 +1,27 @@
-document.getElementById('add-button').addEventListener('click',function(){
-    document.getElementById('list-section').style.display = 'block';
+document.getElementById('add-button').addEventListener('click', function () {
+    if (document.getElementById('input-text').value.length > 0) {
+        document.getElementById('list-section').style.display = 'block';
 
-    // console.log(document.getElementById('input-text').value);
-    const li = document.createElement('li');
-    li.classList.add('bg-slate-400','rounded','p-1','m-2','flex','justify-between','items-center');
+        // console.log(document.getElementById('input-text').value);
+        const li = document.createElement('li');
+        li.classList.add('bg-slate-400', 'rounded', 'p-1', 'm-2', 'flex', 'justify-between', 'items-center');
 
-    const span = document.createElement('span');
-    span.classList.add('text-white');
+        const span = document.createElement('span');
+        span.classList.add('text-white');
 
-    span.innerText = document.getElementById('input-text').value;
+        span.innerText = document.getElementById('input-text').value;
 
-    li.appendChild(span);
+        li.appendChild(span);
 
-    document.getElementById('item-list').appendChild(li);
-    document.getElementById('input-text').value = '';
-    
+        document.getElementById('item-list').appendChild(li);
+        document.getElementById('input-text').value = '';
+
+    }
+    else{
+        alert('Please Input');
+    }
+
+
+
+
 });
