@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="bg-blue-800 py-3">
+            <h1 class="text-gray-200 text-3xl font-semibold text-center">Todo App</h1>
+        </div>
+    </header>
+    <main>
+        <section class="shadow-xl mt-7 w-3/4 border-2 mx-auto p-5 text-center rounded-xl">
+            <input class="border p-2 w-1/2" type="text" placeholder="Enter Something" name="" id="input-text">
+            <br>
+            <button id="add-button" class="bg-blue-800 text-gray-200 py-1 px-3 mt-4 font-semibold rounded">Add</button>
+        </section>
+        <section class="shadow-xl mt-7 w-3/4 border-2 mx-auto p-5 rounded-xl">
+            <ul id="item-list">
+                <!-- <li class="bg-slate-400 rounded p-1 m-2 flex justify-between items-center">
+                    <p>
+                        <span class="bg-blue-800 text-white p-1
+                        rounded">1</span>
+                        <span class="text-white">List</span>
+                    </p>
+                    <button class="bg-red-600 p-1 rounded text-white">delete</button>
+                    <span class="text-white">List</span>
+                </li> -->
+                
+                
+            </ul>
+        </section>
+    </main>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
