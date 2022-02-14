@@ -13,5 +13,6 @@ document.getElementById('add-button').addEventListener('click',function(){
     li.appendChild(span);
 
     document.getElementById('item-list').appendChild(li);
+    document.getElementById('input-text').value = '';
     
 });
