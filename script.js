@@ -1,5 +1,5 @@
 document.getElementById('add-button').addEventListener('click',function(){
-    
+    document.getElementById('list-section').style.display = 'block';
 
     // console.log(document.getElementById('input-text').value);
     const li = document.createElement('li');
