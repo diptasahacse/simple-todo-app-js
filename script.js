@@ -1,6 +1,39 @@
+function createList(value) {
+    // let li = document.createElement('li');
+    // li.setAttribute('list-group-item m-1 border rounded d-flex justify-content-between');
+    // let div = document.createElement('div');
+    // div.setAttribute('d-flex');
+    // let tickLogoIcon = document.createElement('span');
+    // tickLogoIcon.setAttribute('me-1 text-primary');
+    // let
+
+
+
+    let listItem = `
+    
+    `;
+    let li = document.createElement('li');
+    let classesToAdd = ['list-group-item', 'm-1', 'border', 'rounded', 'd-flex', 'justify-content-between'];
+    li.classList.add(...classesToAdd);
+
+    let innerLi = `
+    <div class="d-flex">
+                            <span class="me-1 text-primary"><i class="fa-solid fa-circle-check"></i></span>
+                            <span>${value}</span>
+                        </div>
+
+                        <button class="border-0 bg-transparent text-danger delete-button">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+    `;
+    li.innerHTML = innerLi;
+    return li;
+}
+
 // Add
 document.getElementById('add-button').addEventListener('click', function() {
-    console.log(document.getElementById('input-field').value);
+    let li = createList(document.getElementById('input-field').value);
+    document.getElementById('allList').appendChild(li);
 
 });
 
