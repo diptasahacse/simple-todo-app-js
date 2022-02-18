@@ -1,27 +1,30 @@
-document.getElementById('add-button').addEventListener('click', function () {
-    if (document.getElementById('input-text').value.length > 0) {
-        document.getElementById('list-section').style.display = 'block';
-
-        // console.log(document.getElementById('input-text').value);
-        const li = document.createElement('li');
-        li.classList.add('bg-slate-400', 'rounded', 'p-1', 'm-2', 'flex', 'justify-between', 'items-center');
-
-        const span = document.createElement('span');
-        span.classList.add('text-white');
-
-        span.innerText = document.getElementById('input-text').value;
-
-        li.appendChild(span);
-
-        document.getElementById('item-list').appendChild(li);
-        document.getElementById('input-text').value = '';
-
-    }
-    else{
-        alert('Please Input');
-    }
-
-
-
+// Add
+document.getElementById('add-button').addEventListener('click', function() {
+    console.log(document.getElementById('input-field').value);
 
 });
+
+// let deleteButton = document.getElementsByClassName('delete-button');
+// for (const deleteBtn of deleteButton) {
+//     deleteBtn.addEventListener('click', function() {
+//         let targetList = deleteBtn.parentNode;
+//         let parent = targetList.parentNode;
+//         parent.removeChild(targetList, true)
+
+//     });
+
+// }
+
+//Add Hover Effect
+let deleteButton = document.getElementsByClassName('delete-button');
+for (const deleteBtn of deleteButton) {
+    deleteBtn.addEventListener('mouseenter', function() {
+        let targetList = deleteBtn.parentNode;
+        targetList.classList.add("border-danger");
+    });
+    deleteBtn.addEventListener('mouseleave', function() {
+        let targetList = deleteBtn.parentNode;
+        targetList.classList.remove("border-danger");
+    });
+
+}
