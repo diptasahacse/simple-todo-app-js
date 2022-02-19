@@ -46,27 +46,15 @@ document.getElementById('allList').addEventListener('mousemove', function(event)
         li.classList.add("border-danger");
     } else {
         // // Remove Border
-        // let a = event.target.getAttribute('class');
-        // console.log(a);
-        // console.log(a.includes('single-item'));
+        let classList = event.target.getAttribute('class');
+        if (typeof a == 'string') {
+            // check if it is li class or not
+            if (a.includes('single-item')) {
+                event.target.classList.remove('border-danger');
+            }
+        }
     }
-
-
-
 });
-
-// let deleteButton = document.getElementsByClassName('delete-button');
-// for (const deleteBtn of deleteButton) {
-//     deleteBtn.addEventListener('mouseenter', function() {
-//         let targetList = deleteBtn.parentNode;
-//         targetList.classList.add("border-danger");
-//     });
-//     deleteBtn.addEventListener('mouseleave', function() {
-//         let targetList = deleteBtn.parentNode;
-//         targetList.classList.remove("border-danger");
-//     });
-
-// }
 
 // Delete Button
 document.getElementById('allList').addEventListener('click', function(event) {
