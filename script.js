@@ -23,25 +23,9 @@ document.getElementById('add-button').addEventListener('click', function() {
         document.getElementById('allList').appendChild(li);
         document.getElementById('input-field').value = '';
     }
-
-
 });
-
-// let deleteButton = document.getElementsByClassName('delete-button');
-// for (const deleteBtn of deleteButton) {
-//     deleteBtn.addEventListener('click', function() {
-//         let targetList = deleteBtn.parentNode;
-//         let parent = targetList.parentNode;
-//         parent.removeChild(targetList, true)
-
-//     });
-
-// }
-
 //Add Hover Effect on Delete button
 document.getElementById('allList').addEventListener('mousemove', function(event) {
-
-
     // add border
     let deleteIconClass = event.target.parentNode.getAttribute('class');
     let li = event.target.parentNode.parentNode;
@@ -50,9 +34,9 @@ document.getElementById('allList').addEventListener('mousemove', function(event)
     } else {
         // // Remove Border
         let classList = event.target.getAttribute('class');
-        if (typeof a == 'string') {
+        if (typeof classList == 'string') {
             // check if it is li class or not
-            if (a.includes('single-item')) {
+            if (classList.includes('single-item')) {
                 event.target.classList.remove('border-danger');
             }
         }
