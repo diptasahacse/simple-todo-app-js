@@ -18,9 +18,12 @@ function createList(value) {
 
 // Add
 document.getElementById('add-button').addEventListener('click', function() {
-    let li = createList(document.getElementById('input-field').value);
-    document.getElementById('allList').appendChild(li);
-    document.getElementById('input-field').value = '';
+    if (document.getElementById('input-field').value.length > 0) {
+        let li = createList(document.getElementById('input-field').value);
+        document.getElementById('allList').appendChild(li);
+        document.getElementById('input-field').value = '';
+    }
+
 
 });
 
