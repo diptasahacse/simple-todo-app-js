@@ -1,3 +1,4 @@
-/* li {
-    border: none;
-} */
+#output-section {
+    height: 50vh;
+    overflow: auto;
+}
