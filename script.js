@@ -16,13 +16,22 @@ function createList(value) {
     return li;
 }
 
-// Add
+// Add for click
 document.getElementById('add-button').addEventListener('click', function() {
     if (document.getElementById('input-field').value.length > 0) {
         let li = createList(document.getElementById('input-field').value);
         document.getElementById('allList').appendChild(li);
         document.getElementById('input-field').value = '';
     }
+});
+// Add for Enter
+document.getElementById('input-field').addEventListener('keypress', function(event) {
+    if (event.key == 'Enter' && document.getElementById('input-field').value.length > 0) {
+        let li = createList(document.getElementById('input-field').value);
+        document.getElementById('allList').appendChild(li);
+        document.getElementById('input-field').value = '';
+    }
+
 });
 //Add Hover Effect on Delete button
 document.getElementById('allList').addEventListener('mousemove', function(event) {
